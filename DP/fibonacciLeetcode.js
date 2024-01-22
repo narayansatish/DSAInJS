@@ -15,7 +15,8 @@ function dpFib(n , dpList){
     if(dpList[n]!=-1){
         return dpList[n];
     }
-    return dpFib(n-1,dpList)+dpFib(n-2,dpList);
+    dpList[n]=dpFib(n-1,dpList)+dpFib(n-2,dpList);
+    return dpList[n];
 }
 
 
